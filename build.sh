@@ -18,7 +18,7 @@ REPO="wukongdaily/armbian-installer"
 TAG="2025-03-12"
 OUTPUT_PATH="armbian/armbian.img.xz"
 
-DOWNLOAD_URL=$(curl -s https://api.github.com/repos/$REPO/releases/tags/$TAG | jq -r '.assets[] | select(.name == "'"$FILE_NAME"'") | .browser_download_url')
+DOWNLOAD_URL="https://github.com/armbian/distribution/releases/download/25.2.3/Armbian_25.2.3_Uefi-x86_bookworm_current_6.12.17-homeassistant_minimal.img.xz"
 
 if [[ -z "$DOWNLOAD_URL" ]]; then
   echo "错误：未找到文件 $FILE_NAME"
